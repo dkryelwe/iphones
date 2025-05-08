@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Pricing</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .last-updated-box {
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .pricing-table {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr; /* iPhone | Incell | X07 | Refurb | Service Pack */
+            gap: 1px; /* Space between grid lines */
+            border: 1px solid #ccc; /* Border around the entire table */
+        }
+
+        .pricing-table > div,
+        .pricing-table > input {
+            padding: 8px;
+            border: 1px solid #ccc; /* Individual cell borders */
+            box-sizing: border-box;
+            text-align: center; /* Center text in cells for better alignment */
+        }
+
+        .table-header {
+            font-weight: bold;
+            background-color: #f0f0f0; /* Light background for headers */
+        }
+
+        .price-input {
+            width: 80%;
+            margin: 0 auto; /* Center the input within the cell */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title-container">
+        <h2>iPhone Prices</h2>
+        <div id="last-updated" class="last-updated-box">Last Updated: Never</div>
+    </div>
+
+    <div class="pricing-table">
+        <div class="table-header">iPhone Model</div>
+        <div class="table-header">Incell</div>
+        <div class="table-header">X07</div>
+        <div class="table-header">Refurb</div>
+        <div class="table-header">Service Pack</div>
+
+        <div>iPhone 12</div>
+        <input type="number" class="price-input" id="incell-12" name="incell-12" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-12" name="x07-12" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-12" name="refurb-12" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-12" name="servicepack-12" placeholder="Enter price">
+
+        <div>iPhone 12 mini</div>
+        <input type="number" class="price-input" id="incell-12mini" name="incell-12mini" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-12mini" name="x07-12mini" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-12mini" name="refurb-12mini" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-12mini" name="servicepack-12mini" placeholder="Enter price">
+
+        <div>iPhone 12 Pro</div>
+        <input type="number" class="price-input" id="incell-12pro" name="incell-12pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-12pro" name="x07-12pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-12pro" name="refurb-12pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-12pro" name="servicepack-12pro" placeholder="Enter price">
+
+        <div>iPhone 12 Pro Max</div>
+        <input type="number" class="price-input" id="incell-12promax" name="incell-12promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-12promax" name="x07-12promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-12promax" name="refurb-12promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-12promax" name="servicepack-12promax" placeholder="Enter price">
+
+        <div>iPhone 13</div>
+        <input type="number" class="price-input" id="incell-13" name="incell-13" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-13" name="x07-13" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-13" name="refurb-13" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-13" name="servicepack-13" placeholder="Enter price">
+
+        <div>iPhone 13 mini</div>
+        <input type="number" class="price-input" id="incell-13mini" name="incell-13mini" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-13mini" name="x07-13mini" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-13mini" name="refurb-13mini" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-13mini" name="servicepack-13mini" placeholder="Enter price">
+
+        <div>iPhone 13 Pro</div>
+        <input type="number" class="price-input" id="incell-13pro" name="incell-13pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-13pro" name="x07-13pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-13pro" name="refurb-13pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-13pro" name="servicepack-13pro" placeholder="Enter price">
+
+        <div>iPhone 13 Pro Max</div>
+        <input type="number" class="price-input" id="incell-13promax" name="incell-13promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-13promax" name="x07-13promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-13promax" name="refurb-13promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-13promax" name="servicepack-13promax" placeholder="Enter price">
+
+        <div>iPhone 14</div>
+        <input type="number" class="price-input" id="incell-14" name="incell-14" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-14" name="x07-14" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-14" name="refurb-14" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-14" name="servicepack-14" placeholder="Enter price">
+
+        <div>iPhone 14 Plus</div>
+        <input type="number" class="price-input" id="incell-14plus" name="incell-14plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-14plus" name="x07-14plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-14plus" name="refurb-14plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-14plus" name="servicepack-14plus" placeholder="Enter price">
+
+        <div>iPhone 14 Pro</div>
+        <input type="number" class="price-input" id="incell-14pro" name="incell-14pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-14pro" name="x07-14pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-14pro" name="refurb-14pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-14pro" name="servicepack-14pro" placeholder="Enter price">
+
+        <div>iPhone 14 Pro Max</div>
+        <input type="number" class="price-input" id="incell-14promax" name="incell-14promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-14promax" name="x07-14promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-14promax" name="refurb-14promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-14promax" name="servicepack-14promax" placeholder="Enter price">
+
+        <div>iPhone 15</div>
+        <input type="number" class="price-input" id="incell-15" name="incell-15" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-15" name="x07-15" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-15" name="refurb-15" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-15" name="servicepack-15" placeholder="Enter price">
+
+        <div>iPhone 15 Plus</div>
+        <input type="number" class="price-input" id="incell-15plus" name="incell-15plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-15plus" name="x07-15plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-15plus" name="refurb-15plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-15plus" name="servicepack-15plus" placeholder="Enter price">
+
+        <div>iPhone 15 Pro</div>
+        <input type="number" class="price-input" id="incell-15pro" name="incell-15pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-15pro" name="x07-15pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-15pro" name="refurb-15pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-15pro" name="servicepack-15pro" placeholder="Enter price">
+
+        <div>iPhone 15 Pro Max</div>
+        <input type="number" class="price-input" id="incell-15promax" name="incell-15promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-15promax" name="x07-15promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-15promax" name="refurb-15promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-15promax" name="servicepack-15promax" placeholder="Enter price">
+
+        <div>iPhone 16</div>
+        <input type="number" class="price-input" id="incell-16" name="incell-16" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-16" name="x07-16" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-16" name="refurb-16" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-16" name="servicepack-16" placeholder="Enter price">
+
+        <div>iPhone 16 Plus</div>
+        <input type="number" class="price-input" id="incell-16plus" name="incell-16plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-16plus" name="x07-16plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-16plus" name="refurb-16plus" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-16plus" name="servicepack-16plus" placeholder="Enter price">
+
+        <div>iPhone 16 Pro</div>
+        <input type="number" class="price-input" id="incell-16pro" name="incell-16pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-16pro" name="x07-16pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-16pro" name="refurb-16pro" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-16pro" name="servicepack-16pro" placeholder="Enter price">
+
+        <div>iPhone 16 Pro Max</div>
+        <input type="number" class="price-input" id="incell-16promax" name="incell-16promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="x07-16promax" name="x07-16promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="refurb-16promax" name="refurb-16promax" placeholder="Enter price">
+        <input type="number" class="price-input" id="servicepack-16promax" name="servicepack-16promax" placeholder="Enter price">
+    </div>
+
+    <button onclick="savePrices()">Save Prices</button>
+
+    <script>
+        // Function to update the last updated date in localStorage and display
+        function updateLastUpdated() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            localStorage.setItem('lastUpdated', formattedDate);
+            document.getElementById('last-updated').textContent = 'Last Updated: ' + formattedDate;
+        }
+
+        // Function to save prices to localStorage
+        function savePrices() {
+            const prices = {};
+            const priceInputs = document.querySelectorAll('.price-input');
+            priceInputs.forEach(input => {
+                prices[input.id] = input.value;
+            });
+            localStorage.setItem('iphonePrices', JSON.stringify(prices));
+            updateLastUpdated(); // Update the timestamp when saving
+            alert('Prices saved!');
+        }
+
+        // Function to load prices and the last updated timestamp from localStorage on page load
+        function loadPricesAndTimestamp() {
+            const storedPrices = localStorage.getItem('iphonePrices');
+            if (storedPrices) {
+				const prices = JSON.parse(storedPrices);
+                for (const id in prices) {
+                    const inputElement = document.getElementById(id);
+                    if (inputElement) {
+                        inputElement.value = prices[id];
+                    }
+                }
+            }
+
+            const lastUpdated = localStorage.getItem('lastUpdated');
+            if (lastUpdated) {
+                document.getElementById('last-updated').textContent = 'Last Updated: ' + lastUpdated;
+            }
+        }
+
+        // Load prices and timestamp when the page loads
+        window.onload = loadPricesAndTimestamp;
+
+        // Update the last updated box on initial load (if no timestamp exists yet)
+        if (!localStorage.getItem('lastUpdated')) {
+            updateLastUpdated();
+        }
+    </script>
+
+</body>
+</html>
